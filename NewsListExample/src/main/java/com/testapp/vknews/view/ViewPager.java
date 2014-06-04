@@ -75,8 +75,9 @@ public class ViewPager extends android.support.v4.view.ViewPager {
                         break;
                     case MotionEvent.ACTION_MOVE:
                         if (mFirstX > 0 && mFirstY > 0) {
+                            float dx = Math.abs(mFirstX - event.getX());
                             float dy = Math.abs(mFirstY - event.getY());
-                            if (dy > ALLOW_CLICK_MAX_DISTANCE) {
+                            if (dy > dx) {
                                 getParent().requestDisallowInterceptTouchEvent(false);
                                 b = false;
                             }

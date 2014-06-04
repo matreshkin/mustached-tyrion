@@ -68,17 +68,17 @@ public class NewsDetailFragment extends Fragment implements View.OnClickListener
 
     private void loadDetails() {
         if (mItem.history != null) {
-            if (mItem.text == null) {
+            if (mItem.text == null || mItem.text.trim().length() == 0) {
                 for (NewsItem i : mItem.history) {
-                    if (i.text != null) {
+                    if (i.text != null && i.text.trim().length() > 0) {
                         mItem.text = i.text;
                         break;
                     }
                 }
             }
-            if (mItem.images == null) {
+            if (mItem.images == null || mItem.images.size() == 0) {
                 for (NewsItem i : mItem.history) {
-                    if (i.images != null) {
+                    if (i.images != null && i.images.size() > 0) {
                         mItem.images = i.images;
                         break;
                     }
@@ -93,9 +93,9 @@ public class NewsDetailFragment extends Fragment implements View.OnClickListener
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_news_detail, container, false);
         mViewPager = (ViewPager) view.findViewById(R.id.images);
-        fillView(view);
         if (mItem != null) {
             loadDetails();
+            fillView(view);
         }
         mScrollView = (ScrollView) view.findViewById(R.id.scroll);
         if (savedInstanceState != null) {

@@ -208,11 +208,18 @@ public class NewsListParser {
                     JSONObject photo = attachment.optJSONObject("photo");
                     if (photo != null) {
                         String image = null;
-                        if (mBaseImageSize <= 75) image = photo.optString("photo_75");
-                        if (image == null && mBaseImageSize <= 130) image = photo.optString("photo_130");
-                        if (image == null && mBaseImageSize <= 604) image = photo.optString("photo_604");
-                        if (image == null) image = photo.optString("photo_807");
-                        if (image != null && image.trim().length() == 0) image = null;
+                        HashMap<Integer, String> diffsImages = new HashMap<Integer, String>();
+                        image = photo.optString("photo_75", null);
+                        if (image != null) diffsImages.put(75 - mBaseImageSize, image);
+                        image = photo.optString("photo_130", null);
+                        if (image != null) diffsImages.put(130 - mBaseImageSize, image);
+                        image = photo.optString("photo_604", null);
+                        if (image != null) diffsImages.put(604 - mBaseImageSize, image);
+                        image = photo.optString("photo_807", null);
+                        if (image != null) diffsImages.put(807 - mBaseImageSize, image);
+                        int min = Integer.MAX_VALUE;
+                        for (Integer i : diffsImages.keySet()) if (Math.abs(i) < Math.abs(min)) min = i;
+                        image = diffsImages.get(min);
                         if (image != null) {
                             if (res.images == null) res.images = new ArrayList<String>();
                             res.images.add(image);

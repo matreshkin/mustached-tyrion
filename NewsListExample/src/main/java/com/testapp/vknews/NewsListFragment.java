@@ -370,7 +370,7 @@ public class NewsListFragment extends BaseFragment {
                 p2.userLikes = getBoolean(Database.Tables.NewsParent2.USER_LIKES);
                 p2.canLike = getBoolean(Database.Tables.NewsParent2.CAN_LIKE);
                 p2.repostsCount = getInt(Database.Tables.NewsParent2.REPOSTS_COUNT);
-                images = getString(Database.Tables.NewsParent1.IMAGE_URL);
+                images = getString(Database.Tables.NewsParent2.IMAGE_URL);
                 if (images != null) {
                     List<String> list = Arrays.asList(images.split("\\n"));
                     if (list.size() > 0) p2.images = list;
@@ -379,6 +379,16 @@ public class NewsListFragment extends BaseFragment {
                 p2.senderPhotoMini = getString(Database.Tables.NewsParent2.SENDER_PHOTO_MINI);
                 if (item.history == null) item.history = new ArrayList<NewsItem>();
                 item.history.add(p2);
+            }
+            if (item.history != null) {
+                if (item.images == null || item.images.size() == 0) {
+                    for (NewsItem it : item.history) {
+                        if (it.images != null && it.images.size() > 0) {
+                            item.images = it.images;
+                            break;
+                        }
+                    }
+                }
             }
             mHashItems.put(i, item);
             return item;
