@@ -28,6 +28,23 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
         }
     }
+
+    signingConfigs {
+        release {
+            storeFile file("build/the.keystore.jks")
+            storePassword "qweASD123"
+            keyAlias "mustached-tyrion"
+            keyPassword "qweASD123"
+        }
+    }
+    buildTypes {
+        release {
+            signingConfig signingConfigs.release
+        }
+    }
+    lintOptions {
+        abortOnError false
+    }
 }
 
 dependencies {
