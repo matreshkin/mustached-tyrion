@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/libraries/Android-PullToRefresh/Android-PullToRefresh.iml" filepath="$PROJECT_DIR$/libraries/Android-PullToRefresh/Android-PullToRefresh.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libraries/Android-Universal-Image-Loader/Android-Universal-Image-Loader.iml" filepath="$PROJECT_DIR$/libraries/Android-Universal-Image-Loader/Android-Universal-Image-Loader.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libraries/ListViewAnimationsLibrary/ListViewAnimationsLibrary.iml" filepath="$PROJECT_DIR$/libraries/ListViewAnimationsLibrary/ListViewAnimationsLibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/NewsListExample.iml" filepath="$PROJECT_DIR$/NewsListExample.iml" />
+      <module fileurl="file://$PROJECT_DIR$/NewsListExample/NewsListExample-NewsListExample.iml" filepath="$PROJECT_DIR$/NewsListExample/NewsListExample-NewsListExample.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libraries/libraries.iml" filepath="$PROJECT_DIR$/libraries/libraries.iml" />
+    </modules>
+  </component>
+</project>
+

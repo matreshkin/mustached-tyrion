@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger>
+
+    <dataSet config="main" >
+        <source path="D:\Users\Vasiliy\Projects\test\NewsListExample\libraries\ListViewAnimationsLibrary\res" />
+        <source path="D:\Users\Vasiliy\Projects\test\NewsListExample\libraries\ListViewAnimationsLibrary\build\res\rs\debug" />
+        <source path="D:\Users\Vasiliy\Projects\test\NewsListExample\libraries\ListViewAnimationsLibrary\build\res\generated\debug" />
+    </dataSet>
+    <dataSet config="debug" >
+        <source path="D:\Users\Vasiliy\Projects\test\NewsListExample\libraries\ListViewAnimationsLibrary\src\debug\res" />
+    </dataSet>
+
+</merger>

@@ -1,0 +1,1 @@
+include ':libraries:ListViewAnimationsLibrary', ':libraries:Android-PullToRefresh', ':libraries:Android-Universal-Image-Loader', ':NewsListExample'

@@ -1,0 +1,6 @@
+<!-- From: file:/D:/Users/Vasiliy/Projects/test/NewsListExample/libraries/Android-Universal-Image-Loader/AndroidManifest.xml -->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="2014060418" android:versionName="1.9.2" package="com.nostra13.universalimageloader">
+
+    <uses-sdk android:minSdkVersion="8" android:targetSdkVersion="19"/>
+
+</manifest>

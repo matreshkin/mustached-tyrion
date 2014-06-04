@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">VK news</string>
+    <string name="action_logout">Logout</string>
+    <string name="title_activity_start">VK news</string>
+    <string name="label_error">Error occurred. Try again?</string>
+    <string name="label_likes">Likes:</string>
+    <string name="label_reposts">Reposts:</string>
+    <string name="title_activity_news_detail">HOT news</string>
+    <string name="action_settings">Settings</string>
+
+</resources>

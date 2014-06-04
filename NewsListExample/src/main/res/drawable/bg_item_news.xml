@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:bottom="@dimen/item_news_bevel_padding"
+          android:left="@dimen/item_news_bevel_padding"
+          android:top="@dimen/item_news_bevel_padding"
+          android:right="@dimen/item_news_bevel_padding">
+        <shape android:shape="rectangle">
+            <solid android:color="#0000" />
+            <stroke android:color="#005588" android:width="3dp"/>
+        </shape>
+    </item>
+</layer-list>
